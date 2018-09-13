@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+	<meta charset="UTF-8">
+	<title>Atomreaktor 500/600</title>
+	<link href="https://fonts.googleapis.com/css?family=Exo+2|Teko|VT323" rel="stylesheet">
+	<!--Fikk ikke dette til i jquery css så la det inn her-->
+
+
+	<style>
+	   .checkContainer{
+	     display: block;
+	     height:100%;
+	     width: 10%;
+	     float: left;
+	     margin-left: 1%;
+	     position: relative;
+	     cursor: pointer;
+	     -webkit-user-select: none;
+	     -moz-user-select: none;
+	     -ms-user-select: none;
+	     user-select: none;
+
+	}
+
+	 .checkContainer input {
+	 position: absolute;
+	 opacity: 0;
+	 cursor: pointer;
+	 }
+
+	 .checkmark {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 height: 100%;
+	 width: 100%;
+	 border-radius:10px;
+	 background-color: #6f6e74;
+	}
+	.checkmark:after {
+	 content: "";
+	 position: absolute;
+	}
+	.checkContainer input:checked ~ .checkmark:after {
+	 display: block;
+	 background-color:lime;
+	}
+	.checkContainer .checkmark:after {
+	 left: 25%;
+	 top: 10%;
+	 width: 50%;
+	 height: 10%;
+	 background-color:red;
+
+	}
+	.slider:hover {
+	   opacity: 1;
+	}
+
+	.slider::-webkit-slider-thumb {
+	   -webkit-appearance: none;
+	   appearance: none;
+	   margin-bottom: 1%;
+	   width: 13%;
+	   height: 2vw;
+	   border: 0;
+	   background: url('./images/icons/slider.png');
+	   background-size:cover;
+	   background-repeat:no-repeat;
+	   cursor: pointer;
+	}
+
+	.slider::-moz-range-thumb {
+	 width: 70px;
+	 height: 30px;
+	 margin-bottom: 1%;
+	   border: 0;
+	   background: url('./images/icons/slider.png');
+	   background-size: contain;
+	   background-repeat:no-repeat;
+	   cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+	<div id="appPos"></div>
+	<script src="./scripts/jquery/jquery-3.3.1.min.js">
+	</script>
+	<script src="./scripts/modules/nuclearModule.js">
+	</script>
+	<script src="./scripts/apps/nuclearObjectLiteral.js">
+	</script>
+	<script src="./scripts/initNuclear.js">
+	</script>
+</body>
+</html>
